@@ -1,0 +1,36 @@
+.above-the-fold-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(255,252,243);
+}
+
+.above-the-fold-headline {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'syne-extra-font';
+  font-size: 90px;
+  padding-top: 8vh;
+}
+
+.above-the-fold-underline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.straight-line {
+  width: 40vw;
+  height: 4px;
+  background-color: black;
+}
+
+h3 {
+  font-size: 50px;
+  font-family: 'overpass-font';
+  color: rgb(250,153,3);
+  margin-left: 1vw;
+}
