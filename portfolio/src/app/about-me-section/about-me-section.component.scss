@@ -1,6 +1,5 @@
 .about-me-container {
   background-color: rgb(255,252,243);
-  height: 100vh;
   width: 100vw;
   padding-top: 10vh;
 }
@@ -33,7 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 
   .about-me-information-text-first-span {
     padding-top: 5vh;
@@ -52,19 +51,22 @@
       border: 3px solid black;
       transition: width 125ms ease-in-out;
       font-size: 20px;
+      background-color: rgb(255,252,243);
 
       &:hover{
         cursor: pointer;
         width: 13vw;
         font-weight: bold;
+        background-color: rgb(208, 205, 196);
       }
     }
   }
 }
 
 .about-me-portrait {
-  width: 25vw;
+  width: 23vw;
   height: 60vh;
   border-radius: 5%;
   margin-bottom: 15vh;
 }
+
