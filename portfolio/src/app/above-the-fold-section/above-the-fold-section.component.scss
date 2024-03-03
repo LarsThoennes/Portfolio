@@ -11,8 +11,8 @@
   align-items: center;
   flex-direction: column;
   font-family: 'syne-extra-font';
-  font-size: 90px;
-  padding-top: 8vh;
+  font-size: 70px;
+  padding-top: 15vh;
 }
 
 .above-the-fold-underline {
@@ -23,7 +23,7 @@
 }
 
 .straight-line {
-  width: 40vw;
+  width: 30vw;
   height: 4px;
   background-color: black;
 }
@@ -33,4 +33,59 @@ h3 {
   font-family: 'overpass-font';
   color: rgb(250,153,3);
   margin-left: 1vw;
+}
+
+.above-the-fold-scroll-down {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10vh;
+  width: 90vw;
+  font-family: 'overpass-font';
+}
+
+.left-email {
+  animation: rotate-container 1s ease-in-out;
+  transform: rotate(-90deg);
+  font-size: 20px;
+}
+
+.right-scroll-arrow {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  height: 200px;
+  font-size: 20px;
+}
+
+.scroll-arrow {
+  background-size: cover;
+  animation: changeImages 1.2s infinite;
+  width: 120px;
+  height: 200px;
+}
+
+@keyframes changeImages {
+    9% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/1.png'); }
+  10% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/2.png'); }
+    22% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/2.png'); }
+  23% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/3.png'); }
+    35% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/3.png'); }
+  36% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/4.png'); }
+    48% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/4.png'); }
+  49% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/5.png'); }
+    61% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/5.png'); }
+  62% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/6.png'); }
+    65% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/7.png'); }
+  100% { background-image: url('./../../assets/img/above-the-folder/scroll-arrow/7.png'); }
+}
+
+@keyframes rotate-container {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
 }

@@ -1,9 +1,12 @@
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 @font-face {

@@ -1,0 +1,70 @@
+.about-me-container {
+  background-color: rgb(255,252,243);
+  height: 100vh;
+  width: 100vw;
+  padding-top: 10vh;
+}
+
+.about-me-headline {
+  font-family: 'syne-extra-font';
+  font-size: 40px;
+  margin-left: 5vw;
+  margin-right: 10vw;
+
+  h1{
+    &:hover{
+      color: rgb(250,153,3);
+      cursor: default;
+    }
+  }
+}
+
+.about-me-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-me-information-text {
+  width: 40vw;
+  font-family: 'overpass-font';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20vh;
+
+  .about-me-information-text-first-span {
+    padding-top: 5vh;
+  }
+
+  .about-me-information-text-second-span {
+    padding-top: 5vh;
+  }
+
+  .about-me-button {
+    padding-top: 7vh;
+
+    button{
+      width: 10vw;
+      height: 7vh;
+      border: 3px solid black;
+      transition: width 125ms ease-in-out;
+      font-size: 20px;
+
+      &:hover{
+        cursor: pointer;
+        width: 13vw;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.about-me-portrait {
+  width: 25vw;
+  height: 60vh;
+  border-radius: 5%;
+  margin-bottom: 15vh;
+}
