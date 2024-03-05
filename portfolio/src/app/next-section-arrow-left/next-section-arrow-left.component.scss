@@ -23,7 +23,6 @@
 @keyframes next-section{
   0% {
     background-image: url('./../../assets/img/next-section-arrow/left-side/Property\ 1=Default.png');
-    transform: translateX(0);
   }
   38% {
     background-image: url('./../../assets/img/next-section-arrow/left-side/Property\ 1=Default.png');
@@ -39,6 +38,5 @@
   }
   100% {
     background-image: url('./../../assets/img/next-section-arrow/left-side/Property\ 1=Variant3.png');
-    transform: translateX(30px);
   }
 }
