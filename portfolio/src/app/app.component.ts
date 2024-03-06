@@ -11,6 +11,7 @@ import { PortfolioSectionComponent } from './portfolio-section/portfolio-section
 import { initAOS } from './app.config';
 import { SayHiSectionComponent } from './say-hi-section/say-hi-section.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
