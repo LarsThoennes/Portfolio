@@ -1,0 +1,112 @@
+.email-section-container {
+  height: 150vh;
+  width: 100vw;
+  background-color: black;
+  padding-top: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'overpass-font';
+  gap: 2vh;
+
+  h1 {
+    font-size: 35px;
+    color: rgb(250,153,3);
+  }
+
+  span {
+    font-size: 25px;
+    color: rgb(255,252,243);
+  }
+
+  .email-section-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+    .input-text {
+      background-color: black;
+
+      border: none;
+      border: 2px solid transparent;
+      border-bottom: 2px solid rgb(255,252,243);
+      color: rgb(250,153,3);
+      font-size: 20px;
+      outline: none;
+      padding-left: 1vw;
+
+      &::placeholder {
+        color: rgb(255,252,243);
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        border: 2px solid rgb(255,252,243);
+        animation: borderAnimation 0.3s forwards;
+      }
+    }
+
+    .input-small {
+      height: 5vh;
+    }
+
+    .input-big {
+      display: flex;
+      height: 15vh;
+    }
+
+    .input-checkbox-container{
+      display: flex;
+      align-items: center;
+
+      .input-checkbox {
+        width: 20px;
+        height: 20px;
+        border: 2px solid rgb(255,252,243);
+        box-shadow: none;
+        background: black;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &:checked {
+          background-color: rgb(250,153,3);
+          background-image: url('./../../assets/img/email/checkbox/check.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          border: none;
+        }
+
+        &:hover {
+          background-color: rgb(250,153,3,0.4) ;
+          border-radius: 20%;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .checkbox-span {
+        font-size: 14px;
+        padding-left: 1vw;
+
+        a {
+          color: rgb(250,153,3);
+           &:hover {
+            text-decoration: underline;
+           }
+        }
+      }
+    }
+  }
+
+  @keyframes borderAnimation {
+    from {
+      border-bottom: 2px solid transparent;
+    }
+    to {
+      border-bottom: 2px solid rgb(255,252,243);
+    }
+  }
+
+}

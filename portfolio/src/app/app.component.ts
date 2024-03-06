@@ -10,6 +10,7 @@ import { NextSectionArrowLeftComponent } from './next-section-arrow-left/next-se
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 import { initAOS } from './app.config';
 import { SayHiSectionComponent } from './say-hi-section/say-hi-section.component';
+import { EmailSectionComponent } from './email-section/email-section.component';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { SayHiSectionComponent } from './say-hi-section/say-hi-section.component
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, AboveTheFoldSectionComponent, AboutMeSectionComponent,
     NextSectionArrowRightComponent, MySkillsComponent, CommonModule, NextSectionArrowLeftComponent,
-    PortfolioSectionComponent, SayHiSectionComponent],
+    PortfolioSectionComponent, SayHiSectionComponent, EmailSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
