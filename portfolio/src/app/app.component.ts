@@ -9,13 +9,14 @@ import { CommonModule } from '@angular/common';
 import { NextSectionArrowLeftComponent } from './next-section-arrow-left/next-section-arrow-left.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 import { initAOS } from './app.config';
+import { SayHiSectionComponent } from './say-hi-section/say-hi-section.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, AboveTheFoldSectionComponent, AboutMeSectionComponent,
     NextSectionArrowRightComponent, MySkillsComponent, CommonModule, NextSectionArrowLeftComponent,
-    PortfolioSectionComponent],
+    PortfolioSectionComponent, SayHiSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
