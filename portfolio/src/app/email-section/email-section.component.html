@@ -1,15 +1,55 @@
-<div class="email-section-container">
+<!-- <div class="email-section-container">
   <h1 id="email">Want to discuss a new project ?</h1>
   <span>Say hello! let's discuss your ideas and make it happen</span>
   <div>
     <form (ngSubmit)="onSubmit(contactForm)" class="email-section-input-container" #contactForm="ngForm">
-      <input [(ngModel)]="contactData.name" name="name" type="email" class="input-small input-text" placeholder="Your name" required>
+      <input [(ngModel)]="contactData.name" name="name" type="text" class="input-small input-text" placeholder="Your name" required>
       <input [(ngModel)]="contactData.email" name="email" type="email" class="input-small input-text" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-      <input [(ngModel)]="contactData.message" name="message" type="text" class="input-big input-text" placeholder="Your message" minlength="10" required>
+      <input [(ngModel)]="contactData.message" name="message" type="text" class="input-big input-text" #message="ngModel" placeholder="Your message" minlength="10" required>
+      @if (!message.valid && message.touched && !message.disabled) {
+        <span>Please enter message</span>
+      }
       <div class="input-checkbox-container">
         <input [(ngModel)]="contactData.privacyPolice" name="privacyPolice" class="input-checkbox" type="checkbox" required>
         <span class="checkbox-span">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.</span>
       </div>
-      <button>abschicken</button>
+      <input type="submit" value="Submit">
     </form>
+</div> -->
+
+<div>
+  <div class="email-section-container">
+  <h1 id="email">Want to discuss a new project ?</h1>
+  <span>Say hello! let's discuss your ideas and make it happen</span>
+
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+   <div class="input-section">
+    <input [(ngModel)]="contactData.name" name="name" type="text" placeholder="Your Name" required>
+    <div class="input-value-check">
+      <img src="./../../assets/img/email/checkbox/icons8-häkchen-emoji-48.png">
+    </div>
+   </div>
+   <div class="input-section">
+    <input [(ngModel)]="contactData.email" name="email" type="email" placeholder="Your Email" required>
+    <div class="input-value-check">
+      <img src="./../../assets/img/email/checkbox/icons8-häkchen-emoji-48.png">
+    </div>
+   </div>
+   <div class="input-section">
+    <textarea [(ngModel)]="contactData.message" name="message" type="text" placeholder="Your message" required></textarea>
+    <div class="input-value-check">
+      <img src="./../../assets/img/email/checkbox/icons8-häkchen-emoji-48.png">
+    </div>
+   </div>
+   <div class="input-checkbox-container">
+    <input [(ngModel)]="contactData.privacyPolice" name="privacyPolice" class="input-checkbox" type="checkbox" required>
+    <span class="checkbox-span">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.</span>
+  </div>
+   <div class="submit-button-container">
+    <input class="submit-button" type="submit" value="Send Message" [disabled]="!contactForm.valid">
+   </div>
+  </form>
+
+  <app-footer-section></app-footer-section>
+</div>
 </div>
