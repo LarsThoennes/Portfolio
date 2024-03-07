@@ -1,12 +1,15 @@
 <div class="email-section-container">
-  <h1>Want to discuss a new project ?</h1>
+  <h1 id="email">Want to discuss a new project ?</h1>
   <span>Say hello! let's discuss your ideas and make it happen</span>
-  <div class="email-section-input-container">
-    <input class="input-small input-text" placeholder="Your name">
-    <input class="input-small input-text" placeholder="Your email">
-    <input class="input-big input-text" placeholder="Your message">
-    <div class="input-checkbox-container">
-      <input class="input-checkbox" type="checkbox">
-      <span class="checkbox-span">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.</span>
-    </div>
+  <div>
+    <form (ngSubmit)="onSubmit(contactForm)" class="email-section-input-container" #contactForm="ngForm">
+      <input [(ngModel)]="contactData.name" name="name" type="email" class="input-small input-text" placeholder="Your name" required>
+      <input [(ngModel)]="contactData.email" name="email" type="email" class="input-small input-text" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+      <input [(ngModel)]="contactData.message" name="message" type="text" class="input-big input-text" placeholder="Your message" minlength="10" required>
+      <div class="input-checkbox-container">
+        <input [(ngModel)]="contactData.privacyPolice" name="privacyPolice" class="input-checkbox" type="checkbox" required>
+        <span class="checkbox-span">I've read the <a>privacy policy</a> and agree to the processing of my data as outlined.</span>
+      </div>
+      <button>abschicken</button>
+    </form>
 </div>
