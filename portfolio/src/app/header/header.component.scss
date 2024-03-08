@@ -21,17 +21,24 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
-    }
-    .burger-menu-icon {
-      background-image: url('./../../assets/img/header/burger-menu/Property\ 1=burger.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 40px;
-      width: 40px;
 
-      &:active {
+      .burger-menu-icon-toggle {
+        background-image: url('./../../assets/img/header/burger-menu/Property\ 1=burger.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
         animation: burger-menu-to-cross 0.3s;
         background-image: url('./../../assets/img/header/burger-menu/Property\ 1=Variant5.png');
+      }
+
+      .burger-menu-icon {
+        background-image: url('./../../assets/img/header/burger-menu/Property\ 1=burger.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+        animation: cross-to-burger-menu 0.3s;
       }
     }
   }
@@ -52,5 +59,23 @@
   }
   100% {
     background-image: url('./../../assets/img/header/burger-menu/Property\ 1=Variant5.png');
+  }
+}
+
+@keyframes cross-to-burger-menu {
+  0% {
+    background-image: url('./../../assets/img/header/burger-menu/Property\ 1=Variant5.png');
+  }
+  20% {
+    background-image: url('./../../assets/img/header/burger-menu/Property\ 1=Variant4.png');
+  }
+  40% {
+    background-image: url('./../../assets/img/header/burger-menu/Property\ 1=Variant3\ \(2\).png');
+  }
+  60% {
+    background-image: url('./../../assets/img/header/burger-menu/Property\ 1=Transition.png');
+  }
+  100% {
+    background-image: url('./../../assets/img/header/burger-menu/Property\ 1=burger.png');
   }
 }

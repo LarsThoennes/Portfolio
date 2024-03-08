@@ -1,8 +1,10 @@
 <div class="header-container">
   <div class="header-contents">
     <img class="header-logo" src="./../../assets/img/header/logo/logo (1).png">
-    <button>
-      <div class="burger-menu-icon"></div>
+    <button (click)="toggleMenu()">
+      <div id="button" class="burger-menu-icon"></div>
     </button>
   </div>
 </div>
+
+<app-menu-section *ngIf="showMenu"></app-menu-section>
