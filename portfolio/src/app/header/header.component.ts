@@ -19,12 +19,15 @@ export class HeaderComponent implements OnInit {
   toggleMenu() {
     this.showMenu = !this.showMenu;
     const button = document.querySelector('#button')!;
+    const body = document.querySelector('body')!;
     if(this.showMenu) {
       button.classList.remove('burger-menu-icon')
       button.classList.add('burger-menu-icon-toggle');
+      body.classList.add('overflow-hidden');
     } else {
       button.classList.add('burger-menu-icon')
       button.classList.remove('burger-menu-icon-toggle');
+      body.classList.remove('overflow-hidden');
     }
 
   }

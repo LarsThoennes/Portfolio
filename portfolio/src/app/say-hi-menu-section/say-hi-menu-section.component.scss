@@ -21,11 +21,22 @@
     width: 30vw;
     font-family: 'syne-extra-font';
     font-size: 80px;
+    animation: h1-opacity 7s;
+
 
     &:hover {
       color: rgb(250,153,3);
       cursor: default;
     }
+  }
+}
+
+@keyframes h1-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

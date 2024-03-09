@@ -3,15 +3,16 @@ import { Component, Input, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FooterSectionComponent } from '../footer-section/footer-section.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-email-section',
   standalone: true,
-  imports: [RouterModule, FormsModule, FooterSectionComponent],
+  imports: [RouterModule, FormsModule, FooterSectionComponent, CommonModule],
   templateUrl: './email-section.component.html',
   styleUrl: './email-section.component.scss'
 })
-export class EmailSectionComponent {
+export class EmailSectionComponent{
   @Input() linkTarget: string = '';
 
   http = inject(HttpClient);
@@ -53,5 +54,10 @@ export class EmailSectionComponent {
 
       ngForm.resetForm();
     }
+  }
+
+  sendMessage() {
+    const emailSection = document.querySelector('#emailForm')!;
+    emailSection.classList.add('d-none');
   }
 }
