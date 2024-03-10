@@ -5,31 +5,31 @@
 }
 
 .say-hi-section-container {
-  width: 0;
-  position: absolute;
-  height: 0;
-  border-left:  solid black;
-  border-right: 140vw solid transparent;
-  border-bottom: 17vw solid #000;
-  display: flex;
-  justify-content: flex-start;
+ background-image: url('./../../assets/img/menu-section/footer/Design\ ohne\ Titel\ \(1\).png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ width: 100vw;
+ height: 35vh;
+
 
   h1 {
+    position: absolute;
     color: rgb(255,252,243);
-    margin-top: 20vh;
+    background-color: black;
+    margin-top: 15vh;
     margin-left: 10vw;
-    width: 30vw;
     font-family: 'syne-extra-font';
     font-size: 80px;
     animation: h1-opacity 7s;
-
 
     &:hover {
       color: rgb(250,153,3);
       cursor: default;
     }
-  }
 }
+  }
+
 
 @keyframes h1-opacity {
   from {

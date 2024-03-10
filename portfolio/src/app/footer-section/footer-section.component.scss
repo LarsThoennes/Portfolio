@@ -19,6 +19,9 @@
 }
 
 .footer-section-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-right: 5vw;
 
   .app-icon-container {
@@ -42,20 +45,53 @@
     }
   }
 
-  a {
-    color: rgb(255, 252, 243);
+  .footer-link {
 
     &:hover {
-      animation: link-underline 0.3s ease-in-out;
+      .a-underline {
+        border-bottom: 2px solid orange;
+        width: 55px;
+        animation: a-underline 0.2s;
+        transform: translateX(0px);
+      }
+    }
+    a {
+      color: rgb(255, 252, 243);
+    }
+  }
+
+  .back-to-top-arrow-container {
+    height: 20vh;
+    width: 10vw;
+    background-image: url('./../../assets/img/footer/arrow/arrow-2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      animation: back-to-top-arrow 0.3s ease-in;
+      background-image: url('./../../assets/img/footer/arrow/arrow-1.png');
     }
   }
 }
 
-@keyframes app-icon-hover {
+@keyframes a-underline {
   from {
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateX(-55px);
   }
+
   to {
-    transform: translateY(-10px);
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes back-to-top-arrow {
+  from {
+    background-image: url('./../../assets/img/footer/arrow/arrow-2.png');
+  }
+
+  to {
+    background-image: url('./../../assets/img/footer/arrow/arrow-1.png');
   }
 }

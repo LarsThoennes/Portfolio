@@ -9,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class PortfolioProject1Component {
 
+
+  openJoinGithubURL() {
+    let pageURL = 'https://github.com/MaxWirnsberger/Join';
+    window.location.href = pageURL;
+  }
+
+  openJoinLiveTestURL() {
+    let pageURL = 'https://xn--lars-thnnes-xfb.de/Join/html/index.html';
+    window.location.href = pageURL;
+  }
+
+
 }

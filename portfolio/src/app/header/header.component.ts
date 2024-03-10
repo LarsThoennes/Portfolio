@@ -7,7 +7,7 @@ import { MenuSectionComponent } from '../menu-section/menu-section.component';
   standalone: true,
   imports: [MenuSectionComponent, CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
   showMenu = false;
